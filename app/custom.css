@@ -1,0 +1,60 @@
+main {
+	padding: 30px;
+}
+
+.form {
+	display: grid;
+	grid-template: 40px 40px / 1fr 1fr;
+	gap: 10px;
+}
+
+.form-button {
+	grid-column: 1 / -1;
+}
+
+.form-image {
+	max-width: 100%;
+}
+
+.wrapper{
+	position: relative;
+	text-align: center;
+	grid-column: 1 / -1;
+}
+
+.top-text{
+	position: absolute;
+	top: 0 ;
+	margin: auto;
+	left: 50%;
+	font-size: 30px;
+	text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+	color: white;
+}
+
+.bottom-text{
+	position: absolute;
+	bottom: 0 ;
+	font-size: 30px;
+	text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+	left: 50%;
+	color: white;
+}
