@@ -1,60 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: Nunito;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
 main {
-	padding: 30px;
+  width: calc(100% - 60px);
+  padding: 30px;
 }
 
 .form {
-	display: grid;
-	grid-template: 40px 40px / 1fr 1fr;
-	gap: 10px;
+  display: grid;
+  justify-items: center;
+  grid-template: 40px 40px / 1fr 1fr;
+  gap: 10px;
+}
+
+.form > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form > div > label {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.form > div > input {
+  font-size: 1.3em;
+  border: 2px solid black;
+  border-radius: 0.3em;
 }
 
 .form-button {
-	grid-column: 1 / -1;
+  grid-column: 1 / -1;
+  width: fit-content;
+  font-size: 1em;
+  border: 2px solid black;
+  border-radius: 0.3em;
+  padding: 0.5em 0.8em;
+  background-color: white;
+  transition: 400ms ease-out;
+  cursor: pointer;
+}
+
+.form-button:hover,
+.form-button:active,
+.form-button:focus,
+.form-button:active:focus {
+  background-color: black;
+  color: white;
 }
 
 .form-image {
-	max-width: 100%;
+  max-width: 700px;
+  max-height: 700px;
 }
 
-.wrapper{
-	position: relative;
-	text-align: center;
-	grid-column: 1 / -1;
+.wrapper {
+  position: relative;
+  text-align: center;
+  grid-column: 1 / -1;
 }
 
-.top-text{
-	position: absolute;
-	top: 0 ;
-	margin: auto;
-	left: 50%;
-	font-size: 30px;
-	text-shadow:
-        2px 2px 0 #000,
-        -2px -2px 0 #000,
-        2px -2px 0 #000,
-        -2px 2px 0 #000,
-        0 2px 0 #000,
-        2px 0 0 #000,
-        0 -2px 0 #000,
-        -2px 0 0 #000,
-        2px 2px 5px #000;
-	color: white;
+.top-text,
+.bottom-text {
+  position: absolute;
+  margin: auto;
+  font-size: 2em;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
+  color: white;
 }
 
-.bottom-text{
-	position: absolute;
-	bottom: 0 ;
-	font-size: 30px;
-	text-shadow:
-        2px 2px 0 #000,
-        -2px -2px 0 #000,
-        2px -2px 0 #000,
-        -2px 2px 0 #000,
-        0 2px 0 #000,
-        2px 0 0 #000,
-        0 -2px 0 #000,
-        -2px 0 0 #000,
-        2px 2px 5px #000;
-	left: 50%;
-	color: white;
+.top-text {
+  inset: 0 0 auto 0;
+}
+
+.bottom-text {
+  inset: auto 0 0 0;
 }

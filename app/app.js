@@ -3,10 +3,10 @@ import Header from "./header";
 import Meme from "./meme";
 
 export default function App() {
-	return (
-		<div>
-			<Header />
-			<Meme />
-		</div>
-	);
+  return (
+    <div className="page-wrapper">
+      <Header />
+      <Meme />
+    </div>
+  );
 }
