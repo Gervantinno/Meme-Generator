@@ -22,14 +22,21 @@ h1 {
 
 main {
   width: calc(100% - 60px);
-  padding: 30px;
+  padding: clamp(5px, 4vw, 30px);
 }
 
 .form {
   display: grid;
   justify-items: center;
-  grid-template: 40px 40px / 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 10px;
+}
+
+@media screen and (max-width: 40rem) {
+  .form {
+    grid-template-columns: 1fr;
+  }
 }
 
 .form > div {
@@ -47,11 +54,13 @@ main {
   font-size: 1.3em;
   border: 2px solid black;
   border-radius: 0.3em;
+  width: 100%;
 }
 
 .form-button {
   grid-column: 1 / -1;
   width: fit-content;
+  height: fit-content;
   font-size: 1em;
   border: 2px solid black;
   border-radius: 0.3em;
